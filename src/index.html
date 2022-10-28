@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Maker + Visualizer</title>
+    <link rel="stylesheet" href="../styles/main.scss">
+</head>
+<body>
+    <h1>Music Maker + Visualizer</h1>
+    <button data-playing="false" role="switch" aria-checked="false" class="play-pause-button">
+        <svg class="play" width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="play-path" d="M42 23L0.75 45.5167V0.483339L42 23Z" fill="black"/>
+        </svg>
+        <svg class="pause" width="42" height="46" viewBox="0 0 41 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="pause-path" width="11" height="43" fill="black"/>
+            <rect class="pause-path" x="25" width="11" height="43" fill="black"/>
+        </svg>
+    </button>
+    <div id="seq">
+    </div>
+    <script type="module" src="../scripts/app.js"></script>
+</body>
+</html>

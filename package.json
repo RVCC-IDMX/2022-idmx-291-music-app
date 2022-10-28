@@ -1,0 +1,29 @@
+{
+  "name": "2022-idmx-291-music-app",
+  "version": "1.0.0",
+  "description": "This is the Final Project of IDMX 291 for Fall 2022.",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVCC-IDMX/2022-idmx-291-music-app.git"
+  },
+  "author": "IDMX User Interface Programming Fall 2022",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RVCC-IDMX/2022-idmx-291-music-app/issues"
+  },
+  "homepage": "https://github.com/RVCC-IDMX/2022-idmx-291-music-app#readme",
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "nexusui": "^2.1.6",
+    "sass": "^1.55.0",
+    "tone": "^14.7.77"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}

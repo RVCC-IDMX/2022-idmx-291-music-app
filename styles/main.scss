@@ -1,0 +1,23 @@
+h1 {
+    color: purple;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.play-path,
+.pause-path {
+    position: absolute;
+    transition: fill 200ms ease;
+}
+
+button:hover .play-path,
+button:hover .pause-path {
+    fill: rgb(74, 111, 230);
+}
