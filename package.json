@@ -4,7 +4,7 @@
   "description": "This is the Final Project of IDMX 291 for Fall 2022.",
   "main": "script.js",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel index.html",
     "build": "parcel build"
   },
   "repository": {

@@ -21,3 +21,21 @@ button:hover .play-path,
 button:hover .pause-path {
     fill: rgb(74, 111, 230);
 }
+
+#vol-ctrl,
+#tempo-ctrl,
+#synth-ctrl {
+    display: flex;
+    margin: 10px;
+    min-width: 300px;
+
+    p {
+        margin: 0;
+        align-self: center;
+        padding-inline-end: .5em;
+    }
+}
+
+#seq, #drum-seq {
+    margin: 1em;
+}

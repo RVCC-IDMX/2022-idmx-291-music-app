@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Maker + Visualizer</title>
-    <link rel="stylesheet" href="../styles/main.scss">
+    <link rel="stylesheet" href="src/styles/main.scss">
 </head>
 <body>
     <h1>Music Maker + Visualizer</h1>
@@ -18,8 +18,18 @@
             <rect class="pause-path" x="25" width="11" height="43" fill="black"/>
         </svg>
     </button>
-    <div id="seq">
+    <div id="seq"></div>
+    <div id="drum-seq"></div>
+    <div id="tempo-ctrl">
+        <p>tempo</p>
     </div>
-    <script type="module" src="../scripts/app.js"></script>
+    <div id="vol-ctrl">
+        <p>volume</p>
+    </div>
+    <div id="synth-ctrl">
+        <p>waveform</p>
+    </div>
+    <div id="oscope"></div>
+    <script type="module" src="src/scripts/app.js"></script>
 </body>
 </html>
