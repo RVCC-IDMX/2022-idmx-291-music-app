@@ -2,10 +2,10 @@
   "name": "2022-idmx-291-music-app",
   "version": "1.0.0",
   "description": "This is the Final Project of IDMX 291 for Fall 2022.",
-  "main": "script.js",
+  
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build"
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
