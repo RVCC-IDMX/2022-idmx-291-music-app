@@ -1,5 +1,5 @@
-import {Synth, PolySynth, Transport, Draw, Destination, context, Player, ToneAudioBuffers, MembraneSynth} from 'tone';
-import {Sequencer, Number, Slider, Oscilloscope, Select} from 'nexusui';
+import {Synth, PolySynth, Transport, Draw, Destination, context, Player, ToneAudioBuffers, Volume} from 'tone';
+import {Nexus, Number, Slider, Oscilloscope, Select} from 'nexusui';
 
 // we can use nexusui for prototyping, then we can design + code our own UI
 // elements to replace the nexusui elements as we go
@@ -31,20 +31,19 @@ playButton.addEventListener('pointerdown', () => {
 // create synth - poly synth bc we want polyphony
 let polySynth = new PolySynth(Synth).toDestination();
 
-// create UI sequencer from nexus (thank you nexus!!)
-let sequencer = new Sequencer('#seq', {
-    'size': [400, 200],
-    'mode': 'toggle',
-    'rows': numRows,
-    'columns': numCols,
-});
+// get synth sequencer
+let cells = [];
+for (let i = 0; i < numCols; i++) {
+    let currentCol = document.querySelectorAll(`.sequencer__column:nth-child(${i + 1}) .cell`);
+    cells.push(Array.from(currentCol));
+}
 
-let drumSequencer = new Sequencer('#drum-seq', {
-    'size': [400, 100],
-    'mode': 'toggle',
-    'rows': 4,
-    'columns': numCols,
-});
+// get separate drum sequencer
+let drumCells = [];
+for (let i = 0; i < numCols; i++) {
+    let currentCol = document.querySelectorAll(`.drum-seq__column:nth-child(${i + 1}) .cell`);
+    drumCells.push(Array.from(currentCol));
+}
 
 let player;
 // create player for our drum sounds
@@ -62,32 +61,41 @@ const drumSamples = new ToneAudioBuffers({
     onerror: (error) => console.log(error),
 });
 
-// every time the UI sequencer steps into the next column, store it
-let column;
-let drumColumn;
-sequencer.on('step', (v) => {
-    column = v;
-})
-drumSequencer.on('step', (v) => {
-    drumColumn = v;
-})
-
+let index = 0;
 // callback function for Tone.Transport.scheduleRepeat
 // occurs in 16th note interval
 let repeat = (time) => {
-    drumSequencer.next();
-    sequencer.next();
     Draw.schedule(() => {
         for (let i = 0; i < numRows; i++) {
-            let currentNote = notes[i];
-            if (column[i] === 1 ) {
+            //set variables
+            let currentNote = notes[numRows - (i + 1)];
+            let currentColumn = cells[index].concat(drumCells[index]);
+            let synthCol = cells[index];
+            let drumCol = drumCells[index];
+            let previousColumn = (index === 0)
+                ? cells[numCols - 1].concat(drumCells[numCols - 1])
+                : cells[index - 1].concat(drumCells[index - 1]);
+            
+            //signal that the column is being played
+            currentColumn.forEach(cell => {
+                cell.classList.add('my-turn');
+            });
+            previousColumn.forEach(cell => {
+                cell.classList.remove('my-turn');
+            })
+
+            //play the correct sound
+            if (synthCol[i].checked) {
                 polySynth.triggerAttackRelease(currentNote, "32n", time);
             }
-            if (drumColumn[i] === 1) {
+            if (drumCol[i]?.checked) {
                 player.buffer = drumSamples.get(drumNames[i]);
                 player.start();
             }
         }
+        //next column
+        index++;
+        index = index % 16;
     }, time);
 }
 Transport.scheduleRepeat(repeat, noteInterval);
@@ -101,6 +109,7 @@ let bpmUI = new Number('#tempo-ctrl', {
     'max': 300,
     'step': 1,
 });
+bpmUI.colorize("accent", "rgb(153, 153, 206)");
 
 Transport.bpm.value = bpmUI.value;
 bpmUI.on('change', (v) => {
@@ -111,11 +120,14 @@ bpmUI.on('change', (v) => {
 let volSlider = new Slider('#vol-ctrl', {
     'size': [150, 50],
     'mode': 'relative',
-    'min': -30,
+    'min': -60,
     'max': 0,
     'step': 1,
-    'value': -20,
+    'value': -30,
 });
+volSlider.colorize("accent", "rgb(153, 153, 206)");
+let volume = new Volume(-Infinity).toDestination();
+polySynth.connect(volume);
 polySynth.volume.value = volSlider.value;
 volSlider.on('change', (v) => {
     polySynth.volume.value = v;
@@ -138,13 +150,15 @@ select.on('change', (v) => {
         }
     })
 });
+select.colorize("accent", "rgb(153, 153, 206)");
 
 // visualizer
 let oscilloscope = new Oscilloscope('#oscope', {
-    'size': [800, 150]
+    'size': [300, 150]
 });
 oscilloscope.connect(Destination);
-
+oscilloscope.colorize("accent", "rgb(153, 153, 206)");
+oscilloscope.colorize("fill", "rgb(219, 219, 219)");
 
 // for play/pause button
 let reflectPlayState = () => {
