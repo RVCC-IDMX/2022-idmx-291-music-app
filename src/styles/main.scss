@@ -1,5 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(219, 219, 219);
+}
+
 h1 {
-    color: purple;
+    color: black;
 }
 
 button {
@@ -11,6 +18,14 @@ button:hover {
     cursor: pointer;
 }
 
+.play-pause-button {
+    display: flex;
+    padding-inline: 2rem;
+    padding-block: .5rem;
+    margin-block-end: 1rem;
+    border-radius: .5em;
+}
+
 .play-path,
 .pause-path {
     position: absolute;
@@ -19,15 +34,15 @@ button:hover {
 
 button:hover .play-path,
 button:hover .pause-path {
-    fill: rgb(74, 111, 230);
+    fill: rgb(153, 153, 206);
 }
+
 
 #vol-ctrl,
 #tempo-ctrl,
 #synth-ctrl {
     display: flex;
-    margin: 10px;
-    min-width: 300px;
+    min-width: 250px;
 
     p {
         margin: 0;
@@ -36,6 +51,60 @@ button:hover .pause-path {
     }
 }
 
-#seq, #drum-seq {
-    margin: 1em;
+.sequencer, .drum-seq {
+    margin-block-end: 2rem;
+    display: flex;
+    justify-content: center;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cell {
+        margin: 1.4rem;
+        position: relative;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.my-turn {
+            &::before {
+                box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
+                outline: 1px solid rgba(77, 96, 101, 0.8);
+            }
+        }
+        
+        &::before {
+            content: "";
+            cursor: pointer;
+            top: -100%;
+            left: -100%;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: rgba(153, 153, 206);
+            border-radius: .5em;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        &:checked::before {
+            background: #4d6065;
+        }
+
+        &:hover::before {
+            background: rgb(193, 193, 196);
+        }
+
+        &:focus::before {
+            outline: 2px solid black;
+        }
+    }
+
+}
+
+.settings {
+    display: flex;
+    align-items: center;
 }
