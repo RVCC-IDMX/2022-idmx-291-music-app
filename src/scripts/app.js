@@ -1,5 +1,5 @@
-import {Synth, PolySynth, Transport, Draw, Destination, context, Player, ToneAudioBuffers, Volume} from 'tone';
-import {Nexus, Number, Slider, Oscilloscope, Select} from 'nexusui';
+import {Synth, PolySynth, Transport, Draw, Destination, context, Volume, Players} from 'tone';
+import {Number, Slider, Oscilloscope, Select} from 'nexusui';
 
 // we can use nexusui for prototyping, then we can design + code our own UI
 // elements to replace the nexusui elements as we go
@@ -45,9 +45,9 @@ for (let i = 0; i < numCols; i++) {
     drumCells.push(Array.from(currentCol));
 }
 
-let player;
-// create player for our drum sounds
-const drumSamples = new ToneAudioBuffers({
+
+// create players for our drum sounds
+const drumSamples = new Players({
     urls: {
         'kick': kick,
         'clap': clap,
@@ -56,10 +56,9 @@ const drumSamples = new ToneAudioBuffers({
     },
     onload: () => {
         console.log('loaded');
-        player = new Player().toDestination();
     },
     onerror: (error) => console.log(error),
-});
+}).toDestination();
 
 let index = 0;
 // callback function for Tone.Transport.scheduleRepeat
@@ -89,8 +88,8 @@ let repeat = (time) => {
                 polySynth.triggerAttackRelease(currentNote, "32n", time);
             }
             if (drumCol[i]?.checked) {
-                player.buffer = drumSamples.get(drumNames[i]);
-                player.start();
+                let currentSample = drumSamples.player(drumNames[i]);
+                currentSample.start();
             }
         }
         //next column
