@@ -6,7 +6,7 @@ import {Number, Slider, Oscilloscope, Select} from 'nexusui';
 
 //load drum samples - the way parcel likes it
 const tom = require("url:../drum-samples/tom.wav");
-const kick = require('url:../drum-samples/kick.wav');
+const kick = require('url:../drum-samples/kick.mp3');
 const hihat = require('url:../drum-samples/hihat.wav');
 const clap = require('url:../drum-samples/clap.wav');
 
@@ -89,7 +89,7 @@ let repeat = (time) => {
             }
             if (drumCol[i]?.checked) {
                 let currentSample = drumSamples.player(drumNames[i]);
-                currentSample.start();
+                currentSample.start(0, 0, "16n");
             }
         }
         //next column
