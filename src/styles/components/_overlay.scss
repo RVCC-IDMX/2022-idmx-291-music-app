@@ -1,0 +1,36 @@
+.overlay {
+    background: rgb(32, 128, 192);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    opacity: 1;
+    transition: opacity 500ms ease;
+
+    &__group {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        &--button {
+            border: 1px solid black;
+            padding: 1rem .5rem;
+            border-radius: 1em;
+            background-color: rgb(139, 82, 168);
+            transition: box-shadow ease 200ms, transform ease 200ms;
+
+            &:hover {
+                box-shadow: 3px 3px 0px black;
+                transform: translate(-3px, -3px);
+            }
+        }
+    }
+}
+
+.hide {
+    opacity: 0;
+}

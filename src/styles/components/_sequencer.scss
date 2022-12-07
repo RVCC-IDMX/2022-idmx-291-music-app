@@ -1,0 +1,52 @@
+.sequencer, .drum-seq {
+    margin-block-end: 2rem;
+    display: flex;
+    justify-content: center;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cell {
+        margin: 1.4rem;
+        position: relative;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.my-turn {
+            &::before {
+                box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
+                outline: 1px solid rgba(77, 96, 101, 0.8);
+            }
+        }
+        
+        &::before {
+            content: "";
+            cursor: pointer;
+            top: -100%;
+            left: -100%;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: rgba(153, 153, 206);
+            border-radius: .5em;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        &:checked::before {
+            background: #4d6065;
+        }
+
+        &:hover::before {
+            background: rgb(193, 193, 196);
+        }
+
+        &:focus::before {
+            outline: 2px solid black;
+        }
+    }
+
+}

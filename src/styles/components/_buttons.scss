@@ -1,0 +1,27 @@
+button {
+    border: none;
+    background: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.play-pause-button {
+    display: flex;
+    padding-inline: 2rem;
+    padding-block: .5rem;
+    margin-block-end: 1rem;
+    border-radius: .5em;
+}
+
+.play-path,
+.pause-path {
+    position: absolute;
+    transition: fill 200ms ease;
+}
+
+button:hover .play-path,
+button:hover .pause-path {
+    fill: rgb(153, 153, 206);
+}

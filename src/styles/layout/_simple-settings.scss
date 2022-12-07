@@ -1,0 +1,17 @@
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+#vol-ctrl,
+#tempo-ctrl,
+#synth-ctrl {
+    display: flex;
+    min-width: 250px;
+
+    p {
+        margin: 0;
+        align-self: center;
+        padding-inline-end: .5em;
+    }
+}
