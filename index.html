@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="src/styles/main.scss">
 </head>
 <body>
-    <h1>Music Maker + Visualizer</h1>
+    
+    <h1>Jam House</h1>
     <button data-playing="false" role="switch" aria-checked="false" class="play-pause-button">
         <svg class="play" width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="play-path" d="M42 23L0.75 45.5167V0.483339L42 23Z" fill="#4d6065"/>
@@ -18,6 +19,13 @@
             <rect class="pause-path" x="25" width="11" height="43" fill="#4d6065"/>
         </svg>
     </button>
+    <div class="overlay">
+        <div class="overlay__group">
+            <h2 class="overlay__group--title">Welcome to the Jam House</h2>
+            <button class="overlay__group--button">Enter the Jam House</button>
+            <p class="overlay__group--par">Prepare your ears for some sweet tunes. Press the button to enter. </p>
+        </div>
+    </div>
     <div class="sequencer">
         <div class="sequencer__column">
             <input class="cell" type="checkbox" />
@@ -247,15 +255,30 @@
         </div>
     </div>
     <div class="settings">
+        <button class="clear">Clear</button>
         <div id="tempo-ctrl">
-            <p>tempo</p>
+            <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
+            <label for="tempo">Tempo</label>
         </div>
         <div id="vol-ctrl">
-            <p>volume</p>
+            <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
+            <label for="volume">Volume</label>
         </div>
-        <div id="synth-ctrl">
-            <p>waveform</p>
-        </div>
+        <fieldset id="synth-ctrl">
+            <legend>change synth sound</legend>
+
+            <input name="waveform" value="sine" id="sinewave" type="radio" checked>
+            <label for="sinewave">Sine wave</label>
+
+            <input name="waveform" value="square" id="squarewave" type="radio">
+            <label for="squarewave">Square wave</label>
+
+            <input name="waveform" value="sawtooth" id="sawtoothwave" type="radio">
+            <label for="sawtoothwave">Sawtooth wave</label>
+
+            <input name="waveform" value="triangle" id="trianglewave" type="radio">
+            <label for="trianglewave">Triangle wave</label>
+        </fieldset>
         <div id="oscope"></div>
     </div>
     <script type="module" src="src/scripts/app.js"></script>
