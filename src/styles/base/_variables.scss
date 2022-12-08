@@ -1,0 +1,30 @@
+:root {
+    --dark-purple: #800080;
+    --dark-blue: #2F2FE1;
+    --dark-red: #B42424;
+    --dark-green: #1DAA62;
+    --light-blue: #0D98BA;
+    --light-green: #9ACD32;
+    --light-orange: #FFA500;
+    --dark-pink: #C71585;
+    --light-red: #FF5349;
+
+    --black: #000000;
+    --dark-gray: #5c5c5c;
+    --medium-gray: #AAAAAA;
+    --light-gray: #d2d2d2;
+    --white: #ffffff;
+
+    --purple-100: #b8b9ff;
+    --purple-200: #8d8ed1;
+    --purple-300: #7e80cb;
+    --purple-400: #626397;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.pro-mode-btn{
+    color: var(--pro-mode-btn);
+}
