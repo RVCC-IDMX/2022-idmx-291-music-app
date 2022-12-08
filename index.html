@@ -264,20 +264,37 @@
             <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
             <label for="volume">Volume</label>
         </div>
-        <fieldset id="synth-ctrl">
-            <legend>change synth sound</legend>
+        <fieldset aria-label="change sounds" id="synth-ctrl">
+            <label class="radio-control" for="sinewave">
+                <input class="radio-control--input" name="waveform" value="sine" id="sinewave" type="radio" checked>
+                <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 19.152H12.7848C14.7257 6.56887 19.6142 -12.0712 24.4304 19.152C29.4044 51.3988 33.0661 37.3228 35.9494 19.152C38.2438 4.69205 42.962 -10.8427 47.2152 19.152H60" stroke="black" stroke-width="3"/>
+                </svg>
+            </label>
 
-            <input name="waveform" value="sine" id="sinewave" type="radio" checked>
-            <label for="sinewave">Sine wave</label>
+            
+            <label class="radio-control" for="squarewave">
+                <input class="radio-control--input" name="waveform" value="square" id="squarewave" type="radio">
+                <svg title="square wave" width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 19.0529H12.6923V2H24.2308V19.0529V38.4138H35.7692V19.0529V2H47.3077V19.0529H60" stroke="black" stroke-width="3"/>
+                </svg>
+            </label>
 
-            <input name="waveform" value="square" id="squarewave" type="radio">
-            <label for="squarewave">Square wave</label>
+            
+            <label class="radio-control" for="sawtoothwave">
+                <input class="radio-control--input" name="waveform" value="sawtooth" id="sawtoothwave" type="radio">
+                <svg width="60" height="45" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 21.9184H12.3848L23.8076 5V39.3448L47.8557 5V21.9184H60" stroke="black" stroke-width="3"/>
+                </svg>
+            </label>
 
-            <input name="waveform" value="sawtooth" id="sawtoothwave" type="radio">
-            <label for="sawtoothwave">Sawtooth wave</label>
-
-            <input name="waveform" value="triangle" id="trianglewave" type="radio">
-            <label for="trianglewave">Triangle wave</label>
+            
+            <label class="radio-control" for="trianglewave">
+                <input class="radio-control--input" name="waveform" value="triangle" id="trianglewave" type="radio">
+                <svg width="60" height="44" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 22.5214H12.6514L18.4138 5L29.4363 38.7241L41.1724 5L47.2234 22.5214H60" stroke="black" stroke-width="3"/>
+                </svg>
+            </label>
         </fieldset>
         <div id="oscope"></div>
     </div>
