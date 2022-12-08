@@ -31,21 +31,28 @@
             position: absolute;
             height: 50px;
             width: 50px;
-            background: rgba(153, 153, 206);
+            background: var(--light-gray);
             border-radius: .5em;
+            outline: 1px solid var(--black);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
         &:checked::before {
-            background: #4d6065;
+            background: var(--light-blue);
         }
 
         &:hover::before {
-            background: rgb(193, 193, 196);
+            background: hsl(0, 0%, 70%);
         }
 
         &:focus::before {
             outline: 2px solid black;
+        }
+    }
+
+    .drum-seq__column .cell {
+        &:checked::before {
+            background: var(--dark-green);
         }
     }
 
