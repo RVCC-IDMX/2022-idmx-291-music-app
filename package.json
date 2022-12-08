@@ -2,7 +2,6 @@
   "name": "2022-idmx-291-music-app",
   "version": "1.0.0",
   "description": "This is the Final Project of IDMX 291 for Fall 2022.",
-  
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
@@ -24,6 +23,8 @@
     "tone": "^14.7.77"
   },
   "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.7.0",
+    "@parcel/transformer-inline-string": "^2.7.0",
     "parcel": "^2.7.0"
   }
 }

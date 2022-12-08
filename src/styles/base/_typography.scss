@@ -1,3 +1,31 @@
-h1 {
+:root {
+    --p-font: "M PLUS Code Latin";
+    --title-font: "Kalam";
+
+    --h1-size: "";
+    --h2-size: 4rem;
+    --p-size: 1rem;
+}
+
+h2 {
     color: black;
+    font-family: var(--title-font), cursive;
+    font-size: var(--h2-size);
+    text-align: center;
+}
+
+body {
+    font-family: var(--p-font), sans-serif;
+    font-size: var(--p-size);
+}
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+span {
+    font-family: var(--p-font), sans-serif;
+    font-weight: 800;
+    font-size: 8rem;
 }

@@ -1,5 +1,5 @@
 .overlay {
-    background: hsl(204, 71%, 44%);
+    background: var(--welcome-background-color);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -10,24 +10,11 @@
     transition: opacity 500ms ease;
 
     &__group {
-        height: 30vh;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-
-        &--button {
-            border: 1px solid black;
-            padding: 1rem .5rem;
-            border-radius: 1em;
-            background-color: hsl(280, 34%, 49%);
-            transition: box-shadow ease 200ms, transform ease 200ms;
-
-            &:hover {
-                box-shadow: 3px 3px 0px black;
-                transform: translate(-3px, -3px);
-            }
-        }
     }
 }
 
