@@ -8,7 +8,9 @@
         flex-direction: column;
     }
 
-    .cell {
+    .cell, .cell2, 
+    .cell3, .cell4, 
+    .cell5, .cell6 {
         margin: 1.4rem;
         position: relative;
 
@@ -38,7 +40,7 @@
         }
 
         &:checked::before {
-            background: var(--light-blue);
+            background: var(--synth-row1);
         }
 
         &:hover::before {
@@ -51,6 +53,44 @@
             outline: 2px solid black;
         }
     }
+
+    &__column2, &__column3,
+    &__column4, &__column5,
+    &__column6, &__column7,
+    &__column8, &__column9,
+    &__column10, &__column11,
+    &__column12, &__column13,
+    &__column14, &__column15,
+    &__column16, .cell2 {
+        &:checked::before {
+            background: var(--synth-row2);
+        }
+    }
+
+    .cell3 {
+        &:checked::before {
+            background: var(--synth-row3);
+        }
+    }
+
+    .cell4 {
+        &:checked::before {
+            background: var(--synth-row4);
+        }
+    }
+
+    .cell5 {
+        &:checked::before {
+            background: var(--synth-row5);
+        }
+    }
+
+    .cell6 {
+        &:checked::before {
+            background: var(--synth-row6);
+        }
+    }
+
 
     .drum-seq__column .cell {
         &:checked::before {
