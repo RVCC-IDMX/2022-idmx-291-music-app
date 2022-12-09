@@ -8,7 +8,9 @@
         flex-direction: column;
     }
 
-    .cell {
+    .cell, .cell2, 
+    .cell3, .cell4, 
+    .cell5, .cell6 {
         margin: 1.4rem;
         position: relative;
 
@@ -31,21 +33,79 @@
             position: absolute;
             height: 50px;
             width: 50px;
-            background: rgba(153, 153, 206);
+            background: var(--light-gray);
             border-radius: .5em;
+            outline: 1px solid var(--black);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
         &:checked::before {
-            background: #4d6065;
+            background: var(--synth-row1);
         }
 
         &:hover::before {
-            background: rgb(193, 193, 196);
+            background: hsl(0, 0%, 70%);
+            box-shadow: 3px 3px 0px black;
+            transform: translate(-3px, -3px);
         }
 
         &:focus::before {
             outline: 2px solid black;
+        }
+    }
+
+    .cell2 {
+        &:checked::before {
+            background: var(--synth-row2);
+        }
+    }
+
+    .cell3 {
+        &:checked::before {
+            background: var(--synth-row3);
+        }
+    }
+
+    .cell4 {
+        &:checked::before {
+            background: var(--synth-row4);
+        }
+    }
+
+    .cell5 {
+        &:checked::before {
+            background: var(--synth-row5);
+        }
+    }
+
+    .cell6 {
+        &:checked::before {
+            background: var(--synth-row6);
+        }
+    }
+
+
+    .drum-seq__column .cell {
+        &:checked::before {
+            background: var(--drum-row1);
+        }
+    }
+
+    .drum-seq__column .cell2 {
+        &:checked::before {
+            background: var(--drum-row2);
+        }
+    }
+
+    .drum-seq__column .cell3 {
+        &:checked::before {
+            background: var(--drum-row3);
+        }
+    }
+
+    .drum-seq__column .cell4 {
+        &:checked::before {
+            background: var(--drum-row4);
         }
     }
 
