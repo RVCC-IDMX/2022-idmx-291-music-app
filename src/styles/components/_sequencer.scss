@@ -13,7 +13,7 @@
         position: relative;
 
         &:focus {
-            outline: none;
+            outline: 2px solid var(--black);
         }
 
         &.my-turn {
@@ -84,6 +84,14 @@
         }
     }
 
+    .drum-seq .cell {
+        &.my-turn {
+            &::before {
+                box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
+                outline: 1px solid rgba(77, 96, 101, 0.8);
+            }
+        }
+    }
 
     .drum-seq__column .cell1 {
         &:checked::before {
@@ -107,6 +115,6 @@
         &:checked::before {
             background: var(--drum-row4);
         }
-    }
+    } 
 
 }
