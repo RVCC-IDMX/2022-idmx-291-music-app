@@ -8,9 +8,7 @@
         flex-direction: column;
     }
 
-    .cell, .cell2, 
-    .cell3, .cell4, 
-    .cell5, .cell6 {
+    .cell {
         margin: 1.4rem;
         position: relative;
 
@@ -39,10 +37,6 @@
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
-        &:checked::before {
-            background: var(--synth-row1);
-        }
-
         &:hover::before {
             background: hsl(0, 0%, 70%);
             box-shadow: 3px 3px 0px black;
@@ -51,6 +45,12 @@
 
         &:focus::before {
             outline: 2px solid black;
+        }
+    }
+
+    .cell1 {
+        &:checked::before {
+            background: var(--synth-row1);
         }
     }
 
@@ -85,7 +85,7 @@
     }
 
 
-    .drum-seq__column .cell {
+    .drum-seq__column .cell1 {
         &:checked::before {
             background: var(--drum-row1);
         }
