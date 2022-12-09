@@ -43,7 +43,8 @@
 
         &:hover::before {
             background: hsl(0, 0%, 70%);
-            box-shadow: 2px 2px var(--black);
+            box-shadow: 3px 3px 0px black;
+            transform: translate(-3px, -3px);
         }
 
         &:focus::before {
