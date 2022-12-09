@@ -54,14 +54,7 @@
         }
     }
 
-    &__column2, &__column3,
-    &__column4, &__column5,
-    &__column6, &__column7,
-    &__column8, &__column9,
-    &__column10, &__column11,
-    &__column12, &__column13,
-    &__column14, &__column15,
-    &__column16, .cell2 {
+    .cell2 {
         &:checked::before {
             background: var(--synth-row2);
         }
@@ -94,7 +87,25 @@
 
     .drum-seq__column .cell {
         &:checked::before {
-            background: var(--dark-green);
+            background: var(--drum-row1);
+        }
+    }
+
+    .drum-seq__column .cell2 {
+        &:checked::before {
+            background: var(--drum-row2);
+        }
+    }
+
+    .drum-seq__column .cell3 {
+        &:checked::before {
+            background: var(--drum-row3);
+        }
+    }
+
+    .drum-seq__column .cell4 {
+        &:checked::before {
+            background: var(--drum-row4);
         }
     }
 
