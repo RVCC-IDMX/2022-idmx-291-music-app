@@ -13,7 +13,8 @@
         position: relative;
 
         &:focus {
-            outline: 2px solid var(--black);
+            outline: 1px solid var(--black);
+            border: 1px solid var(--white);
         }
 
         &.my-turn {
@@ -32,8 +33,8 @@
             height: 50px;
             width: 50px;
             background: var(--light-gray);
-            border-radius: .5em;
             outline: 1px solid var(--black);
+            border-radius: .5em;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
@@ -49,36 +50,59 @@
     }
 
     .cell1 {
+        &:hover::before {
+            background: var(--synth-row1);
+        }
         &:checked::before {
             background: var(--synth-row1);
         }
     }
 
     .cell2 {
+        &:hover::before {
+            background: var(--synth-row2);
+        }
+
         &:checked::before {
             background: var(--synth-row2);
         }
     }
 
     .cell3 {
+        &:hover::before {
+            background: var(--synth-row3);
+        }
+
         &:checked::before {
             background: var(--synth-row3);
         }
     }
 
     .cell4 {
+        &:hover::before {
+            background: var(--synth-row4);
+        }
+
         &:checked::before {
             background: var(--synth-row4);
         }
     }
 
     .cell5 {
+        &:hover::before {
+            background: var(--synth-row5);
+        }
+
         &:checked::before {
             background: var(--synth-row5);
         }
     }
 
     .cell6 {
+        &:hover::before {
+            background: var(--synth-row6);
+        }
+
         &:checked::before {
             background: var(--synth-row6);
         }
@@ -94,18 +118,21 @@
     }
 
     .drum-seq__column .cell1 {
+
         &:checked::before {
             background: var(--drum-row1);
         }
     }
 
     .drum-seq__column .cell2 {
+
         &:checked::before {
             background: var(--drum-row2);
         }
     }
 
     .drum-seq__column .cell3 {
+
         &:checked::before {
             background: var(--drum-row3);
         }
