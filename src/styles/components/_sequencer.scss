@@ -11,10 +11,9 @@
     .cell {
         margin: 1.4rem;
         position: relative;
-        transition: box-shadow ease 200ms, transform ease 200ms, background-color ease 200ms;
 
         &:focus {
-            border: 1px solid black;
+            outline: none;
         }
 
         &.my-turn {
@@ -36,6 +35,7 @@
             outline: 1px solid var(--black);
             border-radius: .5em;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+            transition: box-shadow ease 220ms, transform ease 220ms, background-color ease 220ms;
         }
 
         &:hover::before {
@@ -45,7 +45,7 @@
         }
 
         &:focus::before {
-            outline: 2px solid black;
+            outline: 2px solid var(--black);
         }
     }
 
@@ -151,7 +151,7 @@
         &:hover::before {
             background: var(--drum-row4);
         }
-        
+
         &:checked::before {
             background: var(--drum-row4);
         }
