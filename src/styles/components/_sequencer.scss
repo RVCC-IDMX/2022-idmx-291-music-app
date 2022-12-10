@@ -11,10 +11,10 @@
     .cell {
         margin: 1.4rem;
         position: relative;
+        transition: box-shadow ease 200ms, transform ease 200ms, background-color ease 200ms;
 
         &:focus {
-            outline: 1px solid var(--black);
-            border: 1px solid var(--white);
+            border: 1px solid black;
         }
 
         &.my-turn {
@@ -32,14 +32,14 @@
             position: absolute;
             height: 50px;
             width: 50px;
-            background: var(--light-gray);
+            background-color: var(--light-gray);
             outline: 1px solid var(--black);
             border-radius: .5em;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
         &:hover::before {
-            background: hsl(0, 0%, 70%);
+            background-color: hsl(0, 0%, 70%);
             box-shadow: 3px 3px 0px black;
             transform: translate(-3px, -3px);
         }
@@ -118,6 +118,9 @@
     }
 
     .drum-seq__column .cell1 {
+        &:hover::before {
+            background: var(--drum-row1);
+        }
 
         &:checked::before {
             background: var(--drum-row1);
@@ -125,6 +128,9 @@
     }
 
     .drum-seq__column .cell2 {
+        &:hover::before {
+            background: var(--drum-row2);
+        }
 
         &:checked::before {
             background: var(--drum-row2);
@@ -132,6 +138,9 @@
     }
 
     .drum-seq__column .cell3 {
+        &:hover::before {
+            background: var(--drum-row3);
+        }
 
         &:checked::before {
             background: var(--drum-row3);
@@ -139,6 +148,10 @@
     }
 
     .drum-seq__column .cell4 {
+        &:hover::before {
+            background: var(--drum-row4);
+        }
+        
         &:checked::before {
             background: var(--drum-row4);
         }
