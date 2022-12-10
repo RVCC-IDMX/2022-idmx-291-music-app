@@ -18,6 +18,10 @@
         // this is giving a focus state to the input element, but we want to target the input::before pseudo element
         // but even if this wasn't here, I still needed to add something to get rid of the default outline focus for input elements
 
+        //input::before {
+        //    outline: none;
+        //}
+
         &.my-turn {
             &::before {
                 box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
@@ -49,7 +53,7 @@
 
         &:focus::before {
             // border: 1px solid var(--black); 
-            outline: 3px solid var(--white); //<--- and outline for this
+            outline: 2px solid var(--white); //<--- and outline for this
         }
 
         &:checked::before {
