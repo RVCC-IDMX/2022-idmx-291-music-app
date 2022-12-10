@@ -8,6 +8,14 @@
         flex-direction: column;
     }
 
+    dark-gray .cell::before {
+        background-color: var(--dark-gray);
+    }
+
+    light-gray .cell::before {
+        background-color: var(--light-gray);
+    }
+
     .cell {
         margin: 1.4rem;
         position: relative;
@@ -116,13 +124,12 @@
         }
     }
 
-    .drum-seq .cell {
-        &.my-turn {
-            &::before {
-                box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
-                outline: 1px solid rgba(77, 96, 101, 0.8);
-            }
-        }
+    dark-gray .drum-seq .cell::before {
+        background-color: var(--dark-gray);
+    }
+
+    light-gray .drum-seq .cell::before {
+        background-color: var(--light-gray);
     }
 
     .drum-seq__column .cell1 {
