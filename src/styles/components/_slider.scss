@@ -1,0 +1,113 @@
+
+.slider {
+  position: relative;
+  margin: 1rem;
+  .slider:hover {
+    opacity: 1;
+  }
+//slider track styling
+input[type=range] {
+  -webkit-appearance: none; 
+  width: 100%; 
+  background: transparent; 
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 1rem;
+  border-radius: 0.75rem;
+  background: var(--slider);
+  border: 2px solid;
+}
+
+input[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--slider);
+}
+
+input[type=range]::-moz-range-progress {
+  background: #1e3650;
+  height: 1.5rem;
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+input[type=range]::-ms-track {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: transparent;
+  border: 0;
+  
+}
+
+/*
+input[type=range]::-ms-fill-lower {
+  -webkit-appearance: none;
+  background: var(--slider);
+  border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+  -webkit-appearance: none;
+  background: var(--light-gray);
+  border-radius: 10px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ccc;
+}
+*/
+  .visually-hidden { 
+      position: absolute !important;
+      height: 1px; 
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap; /* added line */
+  }
+  
+//thumb styling
+
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 1.5rem;
+        width: 1.5rem;
+        background: var(--slider-btn);
+        border: 2px solid;
+        border-radius: 3px;
+        margin-top: -5px;
+        cursor: pointer;
+      }
+      
+     input[type='range']::-moz-range-thumb {
+        -webkit-appearance: none;
+        height: 1.5rem;
+        width: 0.5rem;
+        background: var(--slider-btn);
+        border: 1px solid;
+        margin-top: 0;
+        cursor: pointer;
+      }
+      
+      input[type='range']::-ms-thumb {
+        -webkit-appearance: none;
+        height: 0.75rem;
+        width: 0.5rem;
+        background: var(--slider-btn);
+        border: 1px solid;
+        margin-top: 0;
+      }
+     
+
+    }
+
+    
+  
+
+
+ 

@@ -256,14 +256,17 @@
     </div>
     <div class="settings">
         <button class="clear">Clear</button>
-        <div id="tempo-ctrl">
+
+        </script>
+        <div class ="slider" id="tempo-ctrl">
             <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
-            <label for="tempo">Tempo</label>
+            <label class="visually-hidden" for="tempo"><img src="src/images/metronome-svg.png" alt="tempo control"></label>
         </div>
-        <div id="vol-ctrl">
+        <div class= "slider" id="vol-ctrl">
             <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
-            <label for="volume">Volume</label>
+            <label class="visually-hidden" for="volume"><img src="src/images/volume-btn.png" alt="volume btn"></label>
         </div>
+
         <fieldset id="synth-ctrl">
             <legend>change synth sound</legend>
 
