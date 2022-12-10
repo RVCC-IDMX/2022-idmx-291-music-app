@@ -10,303 +10,330 @@
     <link rel="stylesheet" href="src/styles/main.scss">
 </head>
 <body>
-    
-    <h1>Jam House</h1>
-    <button data-playing="false" role="switch" aria-checked="false" class="play-pause-button">
-        <svg class="play" width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="play-path" d="M42 23L0.75 45.5167V0.483339L42 23Z" fill="#4d6065"/>
-        </svg>
-        <svg class="pause" width="42" height="46" viewBox="0 0 41 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect class="pause-path" width="11" height="43" fill="#4d6065"/>
-            <rect class="pause-path" x="25" width="11" height="43" fill="#4d6065"/>
-        </svg>
-    </button>
+
+    <header>
+        <h1>Jam House</h1>
+    </header>
+
     <div class="overlay">
-        <div class="overlay__group">
-            <h2 class="overlay__group--title">Welcome to the <br><span>Jam House</span><br></h2>
-            <img src="/src/assets/images/logo.svg">
-            <button class="overlay__group--button">Enter</button>
-            <p class="overlay__group--par">Pressing the button will enable audio to play through your browser.</p>
+            <div class="overlay__group">
+                <h2 class="overlay__group--title">Welcome to the <br><span>Jam House</span><br></h2>
+                <img src="/src/assets/images/logo.svg">
+                <button class="overlay__group--button">Enter</button>
+                <p class="overlay__group--par">Pressing the button will enable audio to play through your browser.</p>
+            </div>
         </div>
-    </div>
-    <button class="synth__button">
-        <img src="/icons/piano.svg">
-    </button>
-    <button class="drum__button">
-        <img src="/icons/drum.svg">
-    </button>
-    <div class="sequencer">
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-        <div class="sequencer__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-            <input class="cell cell5" type="checkbox" />
-            <input class="cell cell6" type="checkbox" />            
-        </div>
-    </div>
-    <div class="drum-seq">
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-        <div class="drum-seq__column">
-            <input class="cell cell1" type="checkbox" />
-            <input class="cell cell2" type="checkbox" />
-            <input class="cell cell3" type="checkbox" />
-            <input class="cell cell4" type="checkbox" />
-        </div>
-    </div>
-    <div class="settings">
-        <button class="clear">Clear</button>
-        <div id="tempo-ctrl">
-            <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
-            <label for="tempo">Tempo</label>
-        </div>
-        <div id="vol-ctrl">
-            <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
-            <label for="volume">Volume</label>
-        </div>
-        <fieldset aria-label="change sounds" id="synth-ctrl">
-            <label class="radio-control" for="sinewave">
-                <input class="radio-control--input" name="waveform" value="sine" id="sinewave" type="radio" checked>
-                <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 19.152H12.7848C14.7257 6.56887 19.6142 -12.0712 24.4304 19.152C29.4044 51.3988 33.0661 37.3228 35.9494 19.152C38.2438 4.69205 42.962 -10.8427 47.2152 19.152H60" stroke="black" stroke-width="3"/>
-                </svg>
-            </label>
 
-            
-            <label class="radio-control" for="squarewave">
-                <input class="radio-control--input" name="waveform" value="square" id="squarewave" type="radio">
-                <svg title="square wave" width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 19.0529H12.6923V2H24.2308V19.0529V38.4138H35.7692V19.0529V2H47.3077V19.0529H60" stroke="black" stroke-width="3"/>
-                </svg>
-            </label>
+    <div class="main-container">
 
-            
-            <label class="radio-control" for="sawtoothwave">
-                <input class="radio-control--input" name="waveform" value="sawtooth" id="sawtoothwave" type="radio">
-                <svg width="60" height="45" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 21.9184H12.3848L23.8076 5V39.3448L47.8557 5V21.9184H60" stroke="black" stroke-width="3"/>
+        <div class="top-ui">
+            <button data-playing="false" role="switch" aria-checked="false" class="play-pause-button">
+                <svg class="play" width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="play-path" d="M42 23L0.75 45.5167V0.483339L42 23Z" fill="#4d6065"/>
                 </svg>
-            </label>
+                <svg class="pause" width="42" height="46" viewBox="0 0 41 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="pause-path" width="11" height="43" fill="#4d6065"/>
+                    <rect class="pause-path" x="25" width="11" height="43" fill="#4d6065"/>
+                </svg>
+            </button>
+            <div class="sliders">
+                <div id="tempo-ctrl">
+                    <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
+                    <label for="tempo">Tempo</label>
+                </div>
+                <div id="vol-ctrl">
+                    <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
+                    <label for="volume">Volume</label>
+                </div>
+            </div>
+        </div>
+            
+        <div class="left-ui">
+            <button class="synth__button">
+                <img src="/icons/piano.svg">
+            </button>
+            <button class="drum__button">
+                <img src="/icons/drum.svg">
+            </button>
+        </div>
 
-            
-            <label class="radio-control" for="trianglewave">
-                <input class="radio-control--input" name="waveform" value="triangle" id="trianglewave" type="radio">
-                <svg width="60" height="44" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 22.5214H12.6514L18.4138 5L29.4363 38.7241L41.1724 5L47.2234 22.5214H60" stroke="black" stroke-width="3"/>
-                </svg>
-            </label>
-        </fieldset>
-        <div id="oscope"></div>
+        <div class="seq-container">
+
+            <div class="sequencer">
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+                <div class="sequencer__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                    <input class="cell cell5" type="checkbox" />
+                    <input class="cell cell6" type="checkbox" />            
+                </div>
+            </div>
+
+
+            <div class="drum-seq">
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+                <div class="drum-seq__column">
+                    <input class="cell cell1" type="checkbox" />
+                    <input class="cell cell2" type="checkbox" />
+                    <input class="cell cell3" type="checkbox" />
+                    <input class="cell cell4" type="checkbox" />
+                </div>
+            </div>
+        </div>
+
+        <div class="right-ui">
+            <fieldset aria-label="change sounds" id="synth-ctrl">
+                <label class="radio-control" for="sinewave">
+                    <input class="radio-control--input" name="waveform" value="sine" id="sinewave" type="radio" checked>
+                    <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 19.152H12.7848C14.7257 6.56887 19.6142 -12.0712 24.4304 19.152C29.4044 51.3988 33.0661 37.3228 35.9494 19.152C38.2438 4.69205 42.962 -10.8427 47.2152 19.152H60" stroke="black" stroke-width="3"/>
+                    </svg>
+                </label>
+
+                
+                <label class="radio-control" for="squarewave">
+                    <input class="radio-control--input" name="waveform" value="square" id="squarewave" type="radio">
+                    <svg title="square wave" width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 19.0529H12.6923V2H24.2308V19.0529V38.4138H35.7692V19.0529V2H47.3077V19.0529H60" stroke="black" stroke-width="3"/>
+                    </svg>
+                </label>
+
+                
+                <label class="radio-control" for="sawtoothwave">
+                    <input class="radio-control--input" name="waveform" value="sawtooth" id="sawtoothwave" type="radio">
+                    <svg width="60" height="45" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 21.9184H12.3848L23.8076 5V39.3448L47.8557 5V21.9184H60" stroke="black" stroke-width="3"/>
+                    </svg>
+                </label>
+
+                
+                <label class="radio-control" for="trianglewave">
+                    <input class="radio-control--input" name="waveform" value="triangle" id="trianglewave" type="radio">
+                    <svg width="60" height="44" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 22.5214H12.6514L18.4138 5L29.4363 38.7241L41.1724 5L47.2234 22.5214H60" stroke="black" stroke-width="3"/>
+                    </svg>
+                </label>
+            </fieldset>
+        </div>
+
+
+        <div class="bottom-ui">
+            <button class="clear">Clear</button>
+        </div>
     </div>
+
+    <footer>copyright a;slkdfj;laskdjf</footer>
+    
     <script type="module" src="src/scripts/app.js"></script>
 </body>
 </html>
