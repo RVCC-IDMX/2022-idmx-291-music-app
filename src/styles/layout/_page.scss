@@ -1,7 +1,85 @@
+
+.top-ui {
+    grid-area: topui;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 3em;
+    
+    button {
+        align-self: center;
+    }
+
+    .sliders {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.left-ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: leftui;
+    justify-self: flex-end;
+    margin-inline-end: 1em;
+}
+
+.seq-container {
+    grid-area: seq;
+}
+
+.right-ui {
+    grid-area: rightui;
+    justify-self: flex-start;
+    margin-inline-start: 1em;
+}
+
+.bottom-ui {
+    grid-area: bottomui;
+}
+
+.main-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+        ". topui topui ."
+        "leftui seq seq rightui"
+        "leftui seq seq rightui"
+        "bottomui bottomui bottomui bottomui";
+}
+
+@media (max-width: 1100px) {
+    .main-container {
+        grid-template-columns: 1fr auto auto 1fr;
+        grid-template-rows: 1fr auto auto 1fr auto;
+        grid-template-areas:
+            ". topui topui ."
+            "leftui seq seq ."
+            "leftui seq seq ."
+            ". bottomui bottomui. "
+            ". . rightui ."
+    }
+
+    .left-ui {
+        width: 2rem;
+    }
+
+    .right-ui {
+        margin-inline-start: 0;
+        justify-self: flex-end;
+        margin-inline-end: 1em;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: hsl(238, 43%, 65%);
+    justify-content: space-between;
+    background: var(--background-color);
     margin: 0;
+    width: 100%;
 }

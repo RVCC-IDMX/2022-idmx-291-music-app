@@ -19,12 +19,35 @@
     --purple-200: #8d8ed1;
     --purple-300: #7e80cb;
     --purple-400: #626397;
-}
 
-body {
-    background-color: var(--background-color);
-}
+    --background-color: var(--purple-300);
+    --welcome-background-color: var(--light-blue);
 
-.pro-mode-btn{
-    color: var(--pro-mode-btn);
+    --slider: var(--light-orange);
+    --slider-btn: var(--light-red);
+
+    --info-tab: var(--purple-100);
+    --info-tab-btn: var(--light-green);
+
+    --waveform-btn: var(--light-green);
+
+    --synth-row1: var(--light-blue);
+    --synth-row2: var(--light-red);
+    --synth-row3: var(--dark-pink);
+    --synth-row4: var(--light-orange);
+    --synth-row5: var(--light-green);
+    --synth-row6: var(--light-blue);
+
+    --drum-row1: var(--dark-green);
+    --drum-row2: var(--dark-red);
+    --drum-row3: var(--dark-purple);
+    --drum-row4: var(--dark-blue);
+
+    --clear-btn: var(--light-orange);
+    --clear-btn-hover: var(--light-red);
+
+    --play-btn: var(--black);
+
+    --border-radius: .3em;
+    --border-thickness: 1px;
 }

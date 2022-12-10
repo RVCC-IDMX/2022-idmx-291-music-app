@@ -1,11 +1,63 @@
 #synth-ctrl {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    align-items: flex-end;
+    background-color: var(--info-tab);
+    border-radius: var(--border-radius);
+    border: var(--border-thickness) solid black;
+    margin-block-start: .3em;
+    padding: .5em;
+    
 
-legend {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
+    .radio-control {
+        background-color: var(--waveform-btn);
+        display: grid;
+        grid-template-columns: 1em auto;
+        width: 6rem;
+        border-radius: var(--border-radius);
+        margin: .2em;
+        border: 1px solid black;
+        justify-items: flex-end;
+        cursor: pointer;
+
+        &--input {
+            appearance: none;
+            margin: 0;
+            width: 3em;
+            height: 3em;
+            box-shadow: inset 4em 4em var(--light-gray);
+            border: 1px solid black;
+            border-radius: 50%;
+            position: relative;
+            left: .5em;
+            display: grid;
+            place-content: center;
+            transition: box-shadow 150ms ease-in-out;
+            cursor: pointer;
+
+            &:focus {
+                box-shadow: inset 4em 4em var(--light-orange);
+            }
+
+            &::before {
+                content: "";
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                border: 1px solid var(--black);
+                transition: box-shadow 150ms ease-in-out;
+                box-shadow: inset 2em 2em var(--light-gray);
+            }
+
+            &:checked::before {
+                box-shadow: inset 2em 2em var(--black);
+            }
+        }
+
+        svg {
+            align-self: center;
+            margin-inline-end: .5em;
+        }
+    }
 }

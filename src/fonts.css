@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "M PLUS Code Latin";
+    src: url("assets/fonts/MPLUSCodeLatin.ttf") format("Truetype");
+}
+
+@font-face {
+    font-family: "Kalam";
+    src: url("assets/fonts/Kalam-Light.ttf") format("Truetype");
+    font-weight: 300;
+}
