@@ -173,3 +173,11 @@
     } 
 
 }
+
+.medium-gray .cell::before {
+    background-color: var(--medium-gray);
+}
+
+.light-gray .cell::before {
+    background-color: var(--light-gray);
+}
