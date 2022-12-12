@@ -19,6 +19,22 @@
             <rect class="pause-path" x="25" width="11" height="43" fill="#4d6065"/>
         </svg>
     </button>
+
+    <div class ="slider">
+    <div id="vol-ctrl">
+       <div id="icon"><img src="/src/images/volume-btn.png" alt="volume"></div>
+        <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
+        <label  for="volume"></label>
+        </div>
+
+        <div id="tempo-ctrl">
+           <div id="icon"><img src="/src/images/metronome-svg.png" alt="metronome"> </div>
+            <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
+            <label  for="tempo"></label>
+        </div>
+   </div>
+
+
     <div class="overlay">
         <div class="overlay__group">
             <h2 class="overlay__group--title">Welcome to the Jam House</h2>
@@ -257,15 +273,6 @@
     <div class="settings">
         <button class="clear">Clear</button>
 
-        </script>
-        <div class ="slider" id="tempo-ctrl">
-            <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
-            <label class="visually-hidden" for="tempo"><img src="src/images/metronome-svg.png" alt="tempo control"></label>
-        </div>
-        <div class= "slider" id="vol-ctrl">
-            <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
-            <label class="visually-hidden" for="volume"><img src="src/images/volume-btn.png" alt="volume btn"></label>
-        </div>
 
         <fieldset id="synth-ctrl">
             <legend>change synth sound</legend>
