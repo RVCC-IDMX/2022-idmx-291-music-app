@@ -1,5 +1,5 @@
 .sequencer, .drum-seq {
-    margin-block-end: 2rem;
+    margin-block-end: 4rem;
     display: flex;
     justify-content: center;
 
@@ -8,18 +8,27 @@
         flex-direction: column;
     }
 
-    .cell {
-        margin: 1.4rem;
-        position: relative;
+    dark-gray .cell::before {
+        background-color: var(--dark-gray);
+    }
 
-        &:focus {
-            outline: none;
-        }
+    light-gray .cell::before {
+        background-color: var(--light-gray);
+    }
+
+    .cell {
+        margin: 1.02rem;
+        position: relative;
+        
+        // &:focus {
+        //     outline: 1px solid var(--white);
+        // }
+        // this is giving a focus state to the input element, but we want to target the input::before pseudo element
+        // but even if this wasn't here, I still needed to add something to get rid of the default outline focus for input elements
 
         &.my-turn {
             &::before {
-                box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
-                outline: 1px solid rgba(77, 96, 101, 0.8);
+                outline: 2px solid var(--black);
             }
         }
         
@@ -29,24 +38,146 @@
             top: -100%;
             left: -100%;
             position: absolute;
-            height: 50px;
-            width: 50px;
-            background: rgba(153, 153, 206);
+            height: 40px;
+            width: 40px;
+            background-color: var(--light-gray);
+            //outline: 1px solid var(--black);
+            border: 1px solid var(--black); //<--- lets use border instead of outline for this
             border-radius: .5em;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-        }
-
-        &:checked::before {
-            background: #4d6065;
+            transition: box-shadow ease 220ms, transform ease 220ms, background-color ease 220ms;
         }
 
         &:hover::before {
-            background: rgb(193, 193, 196);
+            background-color: hsl(0, 0%, 70%);
+            box-shadow: 3px 3px 0px black;
+            transform: translate(-3px, -3px);
         }
 
         &:focus::before {
-            outline: 2px solid black;
+            // border: 1px solid var(--black); 
+            outline: 1px solid var(--white); //<--- and outline for this
+        }
+
+        &:checked::before {
+            border: 2px solid var(--black);
         }
     }
 
+    .cell1 {
+        &:hover::before {
+            background: var(--synth-row1);
+        }
+        &:checked::before {
+            background: var(--synth-row1);
+        }
+    }
+
+    .cell2 {
+        &:hover::before {
+            background: var(--synth-row2);
+        }
+
+        &:checked::before {
+            background: var(--synth-row2);
+        }
+    }
+
+    .cell3 {
+        &:hover::before {
+            background: var(--synth-row3);
+        }
+
+        &:checked::before {
+            background: var(--synth-row3);
+        }
+    }
+
+    .cell4 {
+        &:hover::before {
+            background: var(--synth-row4);
+        }
+
+        &:checked::before {
+            background: var(--synth-row4);
+        }
+    }
+
+    .cell5 {
+        &:hover::before {
+            background: var(--synth-row5);
+        }
+
+        &:checked::before {
+            background: var(--synth-row5);
+        }
+    }
+
+    .cell6 {
+        &:hover::before {
+            background: var(--synth-row6);
+        }
+
+        &:checked::before {
+            background: var(--synth-row6);
+        }
+    }
+
+    .drum-seq .cell {
+        &.my-turn {
+            &::before {
+                box-shadow: 1px 1px 10px rgba(77, 96, 101, 0.8), -1px -1px 10px rgba(77, 96, 101, 0.8);
+                outline: 1px solid rgba(77, 96, 101, 0.8);
+            }
+        }
+    }
+
+    .drum-seq__column .cell1 {
+        &:hover::before {
+            background: var(--drum-row1);
+        }
+
+        &:checked::before {
+            background: var(--drum-row1);
+        }
+    }
+
+    .drum-seq__column .cell2 {
+        &:hover::before {
+            background: var(--drum-row2);
+        }
+
+        &:checked::before {
+            background: var(--drum-row2);
+        }
+    }
+
+    .drum-seq__column .cell3 {
+        &:hover::before {
+            background: var(--drum-row3);
+        }
+
+        &:checked::before {
+            background: var(--drum-row3);
+        }
+    }
+
+    .drum-seq__column .cell4 {
+        &:hover::before {
+            background: var(--drum-row4);
+        }
+
+        &:checked::before {
+            background: var(--drum-row4);
+        }
+    } 
+
+}
+
+.medium-gray .cell::before {
+    background-color: var(--medium-gray);
+}
+
+.light-gray .cell::before {
+    background-color: var(--light-gray);
 }
