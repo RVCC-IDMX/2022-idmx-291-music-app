@@ -1,5 +1,5 @@
 import {Synth, PolySynth, Transport, Draw, Volume, Players} from 'tone';
-import { Oscilloscope } from 'nexusui';
+//import { Oscilloscope } from 'nexusui';
 // import { Scene, PerspectiveCamera, IcosahedronGeometry, MeshLambertMaterial, WebGLRenderer, Mesh, AmbientLight, SpotLight, Vector3 } from 'three';
 // import { createNoise3D } from 'simplex-noise';
 
