@@ -1,4 +1,4 @@
-import {Synth, PolySynth, Transport, Draw, Volume, Players, start} from 'tone';
+import {Synth, PolySynth, Transport, Draw, Volume, Players} from 'tone';
 
 
 //load drum samples - the way parcel likes it
