@@ -26,6 +26,19 @@
     }
 }
 
+.synth__button:focus {
+    background-color: var(--info-tab-btn);
+    animation: translatesynth 2s ease-in-out forwards;
+    height: 47%;
+    img {
+        display: none;
+    }
+    p {
+        display: block;
+        padding: 0.71rem;
+    }
+}
+
 .synth__button:active {
     background-color: var(--light-gray);
 }
@@ -54,6 +67,19 @@
 }
 
 .drum__button:hover {
+    background-color: var(--info-tab-btn);
+    animation: translatedrum 2s ease-in-out forwards;
+    height: 31%;
+    img {
+        display: none;
+    }
+    p {
+        display: block;
+        padding: 0.71rem;
+    }
+}
+
+.drum__button:focus {
     background-color: var(--info-tab-btn);
     animation: translatedrum 2s ease-in-out forwards;
     height: 31%;
