@@ -4,11 +4,12 @@ body {
   }
   
   .logo {
-    width: 100px;
+    width: 80px;
     height: 100px;
     position: absolute;
     top: 0;
     left: 0;
+    margin: .5em;
   }
 
   h1 {
@@ -18,7 +19,7 @@ body {
     top: 50;
     left: 100;
     font-style: bold;
-    font-size: medium;
-    color: white;
+    font-size: 20px;
+    color: var(--black);
     text-transform: uppercase;
   }
