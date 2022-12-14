@@ -1,12 +1,107 @@
 .synth__button {
-    background-color: var(--light-green);
+    background-color: var(--info-tab);
+    width: 65px;
+    height: 80px;
     border: 2px solid black;
-    border-radius: 4px;
+    border-radius: 12px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    p {
+        display: none;
+    }
 }
 
+
+.synth__button:hover {
+    background-color: var(--info-tab-btn);
+    animation: translatesynth 2s ease-in-out forwards;
+    height: 47%;
+    img {
+        display: none;
+    }
+    p {
+        display: block;
+        padding: 0.71rem;
+    }
+}
+
+.synth__button:focus {
+    background-color: var(--info-tab-btn);
+    animation: translatesynth 2s ease-in-out forwards;
+    height: 47%;
+    img {
+        display: none;
+    }
+    p {
+        display: block;
+        padding: 0.71rem;
+    }
+}
+
+.synth__button:active {
+    background-color: var(--light-gray);
+}
+
+@keyframes translatesynth {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-55px);
+    }
+  }
 
 .drum__button {
-    background-color: var(--light-green);
+    background-color: var(--info-tab);
+    width: 65px;
+    height: 80px;
     border: 2px solid black;
-    border-radius: 4px;
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    p {
+        display: none;
+    }
 }
+
+.drum__button:hover {
+    background-color: var(--info-tab-btn);
+    animation: translatedrum 2s ease-in-out forwards;
+    height: 31%;
+    img {
+        display: none;
+    }
+    p {
+        display: block;
+        padding: 0.71rem;
+    }
+}
+
+.drum__button:focus {
+    background-color: var(--info-tab-btn);
+    animation: translatedrum 2s ease-in-out forwards;
+    height: 31%;
+    img {
+        display: none;
+    }
+    p {
+        display: block;
+        padding: 0.71rem;
+    }
+}
+
+.drum__button:active {
+    background-color: var(--light-gray);
+}
+
+
+@keyframes translatedrum {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(18px);
+    }
+  }
