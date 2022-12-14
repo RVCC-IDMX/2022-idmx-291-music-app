@@ -44,13 +44,20 @@
                 </button>
 
                 <div class="sliders">
-                    <div id="tempo-ctrl">
-                        <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
-                        <label for="tempo">Tempo</label>
-                    </div>
                     <div id="vol-ctrl">
+                        <div id="icon">
+                            <img src="/src/images/volume-btn.png" alt="volume">
+                        </div>
                         <input type="range" id="volume" name="volume" min="-60" max="0" value="-30" step="5">
-                        <label for="volume">Volume</label>
+                        <label  for="volume"></label>
+                    </div>
+
+                    <div id="tempo-ctrl">
+                        <div id="icon">
+                            <img src="/src/images/metronome-svg.png" alt="metronome">
+                        </div>
+                        <input type="range" id="tempo" name="tempo" min="0" max="300" value="100" step="10">
+                        <label  for="tempo"></label>
                     </div>
                 </div>
 
