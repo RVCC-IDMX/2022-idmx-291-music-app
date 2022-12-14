@@ -1,8 +1,4 @@
-import {Synth, PolySynth, Transport, Draw, Volume, Players} from 'tone';
-import { Oscilloscope } from 'nexusui';
-// import { Scene, PerspectiveCamera, IcosahedronGeometry, MeshLambertMaterial, WebGLRenderer, Mesh, AmbientLight, SpotLight, Vector3 } from 'three';
-// import { createNoise3D } from 'simplex-noise';
-
+import {Synth, PolySynth, Transport, Draw, Volume, Players, start} from 'tone';
 
 
 //load drum samples - the way parcel likes it
@@ -28,21 +24,19 @@ let numCols = 16;
 let noteInterval = `${numCols}n`;
 
 //enterButton on welcome screen
-enterButton.addEventListener('pointerdown', () => { 
+enterButton.addEventListener('pointerdown', async () => { 
     removeOverlay();
 
     //create context
-    let context = new AudioContext();
-    if (context.state !== 'running') context.resume();
+    await start();
 })
 
-enterButton.addEventListener('keydown', (e) => { 
+enterButton.addEventListener('keydown', async (e) => { 
     if (e.code === "Space" || e.code === "Enter") {     
         removeOverlay();
 
         //create context
-        let context = new AudioContext();
-        if (context.state !== 'running') context.resume();
+        await start();
     }
 })
 
@@ -113,6 +107,28 @@ for (let i = 0; i < numCols; i++) {
 //make array of every cell - good to have
 let allCells = cells.concat(drumCells).flat();
 
+//play sound when cell is clicked (if its unchecked)
+cells.forEach(column => {
+    column.forEach(cell => cell.addEventListener('pointerdown', (e) => {
+        if (!e.target.checked) {
+            let noteIndex = e.target.classList[1].slice(4) - 1;
+            polySynth.triggerAttackRelease(notes[noteIndex], "32n");
+        }
+    }))
+});
+
+drumCells.forEach(column => {
+    column.forEach(cell => cell.addEventListener("pointerdown", (e) => {
+        if (!e.target.checked) {
+            let noteIndex = e.target.classList[1].slice(4) - 1;
+            let currentSample = drumSamples.player(drumNames[noteIndex]);
+            currentSample.start(0, 0, "16n");
+        }
+    }))
+});
+
+
+
 // create players for our drum sounds
 const drumSamples = new Players({
     urls: {
@@ -180,6 +196,11 @@ clearButton.addEventListener('keydown', (e) => {
         clearSequencer();
     }
 });
+
+//normalize sounds (to account for different volumes)
+//let norm = new Tone.Normalize(2, 4);
+//polySynth.connect(norm);
+//drumSamples.connect(norm);
 
 //get ui for volume control
 let volSlider = document.querySelector('#volume');
