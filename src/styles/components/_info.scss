@@ -1,12 +1,30 @@
 .synth__button {
     background-color: var(--info-tab-btn);
+    width: 65px;
+    height: 90px;
     border: 2px solid black;
-    border-radius: 4px;
+    border-radius: 15px 15px 30px 30px;
+    display: grid;
+    // grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    img:nth-child(2) {
+        padding-left: 0.3rem;
+    }
 }
 
 
 .drum__button {
     background-color: var(--info-tab-btn);
+    width: 65px;
+    height: 90px;
     border: 2px solid black;
-    border-radius: 4px;
+    border-radius: 15px 15px 30px 30px;
+    display: grid;
+    // grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    img:nth-child(2) {
+        padding-left: 0.3rem;
+    }
 }
