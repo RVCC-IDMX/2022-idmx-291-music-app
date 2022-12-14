@@ -21,6 +21,9 @@
     --purple-300: #7e80cb;
     --purple-400: #626397;
 
+    --border-radius: .3em;
+    --border-thickness: 2px;
+
     --background-color: var(--purple-300);
     --welcome-background-color: var(--medium-blue);
 
@@ -44,11 +47,12 @@
     --drum-row3: var(--dark-purple);
     --drum-row4: var(--dark-blue);
 
-    --clear-btn: var(--light-orange);
-    --clear-btn-hover: var(--light-red);
+    --clear-btn: var(--light-red);
+    --clear-btn-hover: var(--dark-red);
 
-    --play-btn: var(--black);
+    --play-btn: var(--purple-100);
+    --play-btn-hover: var(--purple-300)
 
-    --border-radius: .3em;
-    --border-thickness: 1px;
+    --border-radius: var(--border-radius);
+    
 }

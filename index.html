@@ -17,12 +17,11 @@
         </header>
         
         <div class="overlay">
-                <div class="overlay__group">
-                    <h2 class="overlay__group--title">Welcome to the <br><span>Jam House</span><br></h2>
-                    <img src="/src/assets/images/logo.svg">
-                    <button class="overlay__group--button">Enter</button>
-                    <p class="overlay__group--par">Pressing the button will enable audio to play through your browser.</p>
-                </div>
+            <div class="overlay__group">
+                <h2 class="overlay__group--title">Welcome to the <br><span>JAM HOUSE</span><br></h2>
+                <img src="/src/assets/images/logo.svg">
+                <button class="overlay__group--button">Enter</button>
+                <p class="overlay__group--par">Pressing the button will enable audio to play through your browser.</p>
             </div>
         </div>
 
@@ -31,12 +30,16 @@
             <div class="top-ui">
 
                 <button data-playing="false" role="switch" aria-checked="false" class="play-pause-button">
-                    <svg class="play" width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="play-path" d="M42 23L0.75 45.5167V0.483339L42 23Z" fill="#4d6065"/>
+                    <svg class="play" aria-label="play" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="play-path" cx="40" cy="40" r="40" fill="#B8B9FF"/>
+                        <path d="M68.2844 11.7156C60.7292 4.16082 50.6844 0 40 0C29.3156 0 19.2708 4.16082 11.7156 11.7156C4.16082 19.2708 0 29.3156 0 40C0 50.6844 4.16082 60.7292 11.7156 68.2844C19.2708 75.8392 29.3156 80 40 80C50.6844 80 60.7292 75.8392 68.2844 68.2844C75.8392 60.7292 80 50.6844 80 40C80 29.3156 75.8392 19.2708 68.2844 11.7156ZM40 75.0515C20.6725 75.0515 4.94845 59.3275 4.94845 40C4.94845 20.6725 20.6725 4.94845 40 4.94845C59.3275 4.94845 75.0515 20.6725 75.0515 40C75.0515 59.3275 59.3275 75.0515 40 75.0515Z" fill="black"/>
+                        <path d="M30.366 25.3487L55.7324 40L30.366 54.6513V25.3487Z" fill="black" stroke="black"/>
                     </svg>
-                    <svg class="pause" width="42" height="46" viewBox="0 0 41 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="pause-path" width="11" height="43" fill="#4d6065"/>
-                        <rect class="pause-path" x="25" width="11" height="43" fill="#4d6065"/>
+                    <svg class="pause" aria-label="pause" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="pause-path" cx="40" cy="40" r="40" fill="#B8B9FF"/>
+                        <path d="M68.2844 11.7156C60.7292 4.16082 50.6844 0 40 0C29.3156 0 19.2708 4.16082 11.7156 11.7156C4.16082 19.2708 0 29.3156 0 40C0 50.6844 4.16082 60.7292 11.7156 68.2844C19.2708 75.8392 29.3156 80 40 80C50.6844 80 60.7292 75.8392 68.2844 68.2844C75.8392 60.7292 80 50.6844 80 40C80 29.3156 75.8392 19.2708 68.2844 11.7156ZM40 75.0515C20.6725 75.0515 4.94845 59.3275 4.94845 40C4.94845 20.6725 20.6725 4.94845 40 4.94845C59.3275 4.94845 75.0515 20.6725 75.0515 40C75.0515 59.3275 59.3275 75.0515 40 75.0515Z" fill="black"/>
+                        <path d="M31 26V56" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M48 26V56" stroke="black" stroke-width="6" stroke-linecap="round"/>
                     </svg>
                 </button>
 

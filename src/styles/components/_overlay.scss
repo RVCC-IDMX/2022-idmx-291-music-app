@@ -17,7 +17,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+
+        &--button {
+            margin-block: 2em;
+        }
     }
+
+
 }
 
 .hide {

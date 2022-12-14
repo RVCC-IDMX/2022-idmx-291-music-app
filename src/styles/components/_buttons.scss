@@ -1,33 +1,39 @@
 button {
-    border: 1px solid black;
+    border: var(--border-thickness) solid black;
     padding: .5rem 2rem;
-    border-radius: .3em;
+    border-radius: var(--border-radius);
     background-color: var(--clear-btn);
     transition: box-shadow ease 200ms, transform ease 200ms, background-color ease 200ms;
+    cursor: pointer;
 
     &:hover {
         background-color: var(--clear-btn-hover);
         box-shadow: 3px 3px 0px black;
         transform: translate(-3px, -3px);
-        cursor: pointer;
+        color: var(--white);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--white);
     }
 }
 
 .play-pause-button {
     display: flex;
-    padding-inline: 2rem;
-    padding-block: .5rem;
-    margin-block-end: 1rem;
-    border-radius: .5em;
-}
+    padding: 0;
+    margin-block: 2rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
 
-.play-path,
-.pause-path {
-    position: absolute;
-    transition: fill 200ms ease;
+    &:hover {
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
+    }
 }
 
 button:hover .play-path,
 button:hover .pause-path {
-    fill: rgb(153, 153, 206);
+    fill: var(--play-btn-hover);
 }
