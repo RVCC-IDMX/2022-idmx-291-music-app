@@ -8,11 +8,7 @@
   //padding-inline: 4rem;
 align-items: center;
 min-width: 50vh;
-
-
-
-
-
+height: 100%;
 
 
   .slider:hover {
@@ -26,19 +22,24 @@ min-width: 50vh;
   img {
     display: inline-block; /* Avoid the space under the image caused by line height */
     position: relative;
-    top:30px
-  
     
   }
  
-  
+  #icon{
+    display: inline;
+  }
+
+  #vol-ctrl,#tempo-ctrl{
+    display:flex;
+    align-items: center;
+  }
 
 
 
 //slider track styling
 input[type=range] {
-  -webkit-appearance: none; 
-  width: 100%; 
+  appearance: none;
+  width:200px; 
   //max-width: 10rem;
   background: transparent; 
  margin-inline: 3rem;
